@@ -1,0 +1,116 @@
+
+
+/* ====================== [  Start Button Style ] ====================== */
+
+.butn{
+	padding: 15px 35px;
+	font-size: 13px;
+	border: 1px solid transparent;
+	transition: all .4s;
+
+	&:hover{
+
+		.char {
+			animation: fadeInUp .3s cubic-bezier(.3, 0, .7, 1) both;
+			animation-delay: calc(30ms * var(--char-index));
+		}
+	}
+
+	&.bord{
+		border: 1px solid #000;
+
+		&:hover{
+			background: #111;
+			color: #fff;
+		}
+	}
+
+	&.light{
+		background: #fff;
+		color: #333;
+
+		&:hover{
+			background: transparent;
+			border-color: #fff;
+
+			color: #fff;
+		}
+	}
+
+	&.dark{
+		background: #222;
+		color: #fff;
+
+		&:hover{
+			background: transparent;
+			border-color: #222;
+			color: #333;
+		}
+	}
+
+	&.color{
+		background: linear-gradient(to right, rgb(18, 194, 233), rgb(196, 113, 237), rgb(246, 79, 89));
+		border: transparent;
+
+		&:hover{
+			background: #fff;
+			color: #111;
+		}
+	}
+
+	&.curve{
+		border-radius: 5px;
+	}
+
+	&.radius{
+		border-radius: 30px;
+	}
+}
+
+[data-overlay-dark]{
+
+	.butn{
+
+		&.bord{
+			border-color: #fff;
+
+			&:hover{
+				background: #fff;
+				
+				span{
+					color: #111;
+				}
+			}
+		}
+	}
+}
+
+.simple-btn{
+	position: relative;
+	padding: 7px;
+	display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: 300;
+
+	&:after{
+		content: '';
+		width: 45%;
+		height: 100%;
+		background: rgba(0,0,0,.05);
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	&.right{
+
+		&:after{
+			left: auto;
+			right: 0;
+		}
+	}
+}
+
+/* ====================== [ End Button Style ] ====================== */
